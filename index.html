@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HoloXperienceTechWebpage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="hero-section">
+    <h1 class="header-title">HoloXperience</h1>
+    <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+    <button id="modeToggle" class="mode-toggle">🌙</button>
+    <nav class="navbar">
+      <ul id="sidebar" class="sidebar">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2>Revolutionize Your Learning</h2>
+      <p>Immersive holographic experiences to guide your educational journey.</p>
+      <a href="#products" class="cta-button">Explore Products</a>
+    </div>
+  </header>
+
+  <div class="info-section">
+    <section id="about" class="about-section styled-section">
+      <h2>About HoloXperience</h2>
+      <p>HoloXperience combines lifelike holographic projections with personalized AI-driven learning.</p>
+    </section>
+
+    <section id="team" class="products-section styled-section">
+      <h3>Meet Our Team</h3>
+      <p>Mr. Muskan Lama (Founder)</p>
+      <p>Mr. Chris Evans (Engineer)</p>
+      <p>Mr. Robert Downey (Investor)</p>
+      <p>Our team consists of passionate educators, engineers, and designers dedicated to transforming education
+        through
+        cutting-edge technology.</p>
+    </section>
+  </div>
+
+  <section id="products" class="products-section styled-section">
+    <h2>Our Products & Services</h2>
+    <div class="product-gallery">
+      <div class="product-card" onclick="openModal('holoLabModal')">
+        <h3>HoloLab VR</h3>
+        <p>Interactive science labs for safe, engaging learning experiences.</p>
+        <img
+          src="https://www.vision3d.in/blog/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-04-at-3.26.53-PM-1-1200x900.jpeg"
+          alt="holo">
+      </div>
+      <div class="product-card" onclick="openModal('virtuLearnModal')">
+        <h3>VirtuLearn Hub</h3>
+        <p>Virtual classrooms for real-time collaboration with peers worldwide.</p>
+        <img
+          src="https://img.freepik.com/premium-photo/futuristic-classroom-with-holographic-displays-virtual-reality-integrated-into-learning-experience_1108314-13323.jpg"
+          alt="holoclass">
+      </div>
+      <div class="product-card" onclick="openModal('historyXplorerModal')">
+        <h3>HistoryXplorer</h3>
+        <p>Experience historical moments with real-time holographic reenactments.</p>
+        <img
+          src="https://img.freepik.com/premium-photo/teacher-teaching-history-virtual-hologram-board-ai-generated-history-cars_889761-560.jpg"
+          alt="holohistory">
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section styled-section">
+    <h2>Testimonials</h2>
+    <blockquote>
+      <p>"HoloXperience has transformed our classrooms into immersive learning environments. Students are more
+        engaged than ever!" - Er.Smith</p>
+    </blockquote>
+    <blockquote>
+      <p>"The virtual simulations provided by HoloXperience have made complex concepts easy to grasp." -
+        Prof.Johnson
+      </p>
+    </blockquote>
+  </section>
+
+  <section id="contact" class="contact-section styled-section">
+    <h2>Contact Us</h2>
+    <p>Ready to bring HoloXperience to your institution? Reach out today.</p>
+    <form aria-label="Contact Form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 HoloXperience</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const modeToggle = document.getElementById("modeToggle");
+    const body = document.body;
+
+    modeToggle.addEventListener("click", () => {
+      body.classList.toggle("light-mode");
+      modeToggle.textContent = body.classList.contains("light-mode") ? "🌙" : "☀️";
+    });
+
+    const sidebarToggle = document.getElementById("sidebarToggle");
+    const sidebar = document.getElementById("sidebar");
+
+    sidebarToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+  </script>
+</body>
+
+</html>
