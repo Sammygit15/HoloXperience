@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #f1f1f1;
+  background-color: #1b1b2f;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.hero-section {
+  background: url('holographic-background.jpg') no-repeat center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.header-title {
+  font-size: 3.5em;
+  color: #00d1e0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(58, 54, 173, 0.6);
+  position: sticky;
+  z-index: 1000;
+}
+
+.sidebar {
+  list-style: none;
+  display: none;
+  /* Hide sidebar by default */
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: rgba(58, 54, 173, 0.8);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.sidebar.active {
+  display: flex;
+  /* Show sidebar when active */
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.sidebar li a:hover {
+  color: #e3e5ed;
+}
+
+.styled-section {
+  padding: 10px 20px;
+  background: rgba(58, 54, 173, 0.6);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hero-content {
+  margin-top: 20px;
+  padding: 40px 20px;
+  background-color: rgba(58, 54, 173, 0.6);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(77, 80, 145, 0.3);
+}
+
+.hero-content h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: linear-gradient(45deg, #00d1e0, #a857f0);
+  padding: 15px 30px;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: linear-gradient(45deg, #a857f0, #00d1e0);
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #eff5f5;
+}
+
+section h3 {
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #eff5f5;
+}
+
+section p {
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.testimonials-section {
+  background: #2a2a8e;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+.testimonials-section blockquote {
+  margin: 20px auto;
+  font-style: italic;
+  color: #f1f1f1;
+  border-left: 5px solid #00d1e0;
+  padding-left: 20px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 12px;
+  border: 2px solid #00d1e0;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  transition: border 0.3s;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #a857f0;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #2a2a8e;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+.product-card {
+  background: rgba(42, 42, 142, 0.8);
+  border: 1px solid #00d1e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+  width: 300px;
+  color: #f1f1f1;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  background: rgba(65, 63, 116, 0.6);
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  background: rgba(42, 42, 142, 1);
+
+}
+
+.logo {
+  width: 100px;
+  /* Set to a smaller size to fit well */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Ensure it's treated as a block element */
+  margin: 0 auto 20px auto;
+  /* Center it and add some margin below */
+}
+
+.hero-content {
+  margin-top: 20px;
+  /* Add spacing above this section */
+}
+
+.product-card img {
+  max-width: 100%;
+  /* Ensures the image does not exceed the width of its container */
+  height: auto;
+  /* Maintains the aspect ratio */
+  border-radius: 8px;
+  /* Optional: to give images rounded corners */
+  object-fit: contain;
+  /* Adjusts the image to fit within the container */
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #1b1b2f;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #f1f1f1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Flexbox for the info section */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.about-section,
+.products-section {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  background: rgba(58, 54, 173, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content h2 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .info-section {
+    flex-direction: column;
+  }
+}
