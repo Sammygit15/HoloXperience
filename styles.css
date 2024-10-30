@@ -67,7 +67,6 @@ body.light-mode {
 .sidebar {
   list-style: none;
   display: none;
-  /* Hide sidebar by default */
   flex-direction: column;
   position: absolute;
   top: 60px;
@@ -79,7 +78,6 @@ body.light-mode {
 
 .sidebar.active {
   display: flex;
-  /* Show sidebar when active */
 }
 
 .sidebar li {
@@ -231,31 +229,21 @@ footer p {
 
 .logo {
   width: 100px;
-  /* Set to a smaller size to fit well */
   height: auto;
-  /* Maintain aspect ratio */
   display: block;
-  /* Ensure it's treated as a block element */
   margin: 0 auto 20px auto;
-  /* Center it and add some margin below */
 }
 
 .hero-content {
   margin-top: 20px;
-  /* Add spacing above this section */
 }
 
 .product-card img {
   max-width: 100%;
-  /* Ensures the image does not exceed the width of its container */
   height: auto;
-  /* Maintains the aspect ratio */
   border-radius: 8px;
-  /* Optional: to give images rounded corners */
   object-fit: contain;
-  /* Adjusts the image to fit within the container */
 }
-
 
 .modal {
   display: none;
@@ -291,7 +279,6 @@ footer p {
   cursor: pointer;
 }
 
-/* Flexbox for the info section */
 .info-section {
   display: flex;
   justify-content: space-between;
@@ -309,7 +296,6 @@ footer p {
   border-radius: 8px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
